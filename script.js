@@ -1,1 +1,3 @@
-//your JS code here. If required.
+document.getElementById("ham").addEventListener("click", function () {
+    document.getElementById("nav-sub").classList.toggle("show");
+});

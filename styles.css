@@ -1,1 +1,77 @@
-/*  your css code here. If applicable */
+body {
+    margin: 0;
+    background: #f8f6f7;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e8c22e;
+    color: white;
+    padding: 20px;
+}
+
+.title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.ham {
+    display: none; 
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.ham span {
+    width: 28px;
+    height: 4px;
+    background: #115a9d;
+    border-radius: 2px;
+}
+
+.nav-sub {
+    display: flex;              
+    gap: 20px;
+    background: #e8c22e;
+    padding: 15px 20px;
+}
+
+.nav-sub a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .ham {
+        display: flex;
+    }
+
+    .nav-sub {
+        display: none;
+        flex-direction: column;
+        background: #e8c22e;
+        width: 100%;
+        padding: 15px 20px;
+        animation: slideDown 0.3s ease;
+    }
+
+    .nav-sub.show {
+        display: flex;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
